@@ -1,0 +1,18 @@
+<template name="date">
+  <view class="share-date">
+    <!-- 可以在获取数据时处理 -->
+    <block wx:if="{{ fn.isSameDay(date, share) }}" class="sameday">
+    </block>
+    <view wx:elif="{{ fn.isToday(date) }}" class="today">
+    今天
+    </view>
+    <view wx:elif="{{ fn.isYesterDay(date) }}" class="yesterday">
+    昨天
+    </view>
+    <view wx:else class="day">
+      <view class="day">{{fn.getDay(date)}}</view>
+      <view class="month">{{fn.getMonth(date)}}月</view>
+    </view>
+  </view>
+</template>
+<wxs src="./date.wxs" module="fn" />

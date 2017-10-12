@@ -1,0 +1,29 @@
+var values = []
+module.exports = {
+  // weapp 会存在重数执行这个函数....
+  isSameDay: function (date) {
+    date = Date.parse(date)
+    // 这个函数如果重复执行可能会执行多次...
+    if (values.indexOf(date) === -1) {
+      values.push(date)
+    }
+    var index = values.indexOf(date)
+    if (index > 0) {
+      return getDate(date).getDate() === getDate(values[index - 1]).getDate()
+    } else {
+      return false
+    }
+  },
+  isToday: function (date){
+    return getDate(date).getDate() === getDate().getDate() && Date.parse(date) + 3600 * 24 * 1000 > getDate().getTime()
+  },
+  isYesterday: function (date) {
+    return getDate(Date.parse(date) + 3600 * 24 * 1000).getDate() === getDate().getDate()
+  },
+  getMonth: function (date) {
+    return getDate(date).getMonth() + 1
+  },
+  getDay: function (date) {
+    return getDate(date).getDate()
+  }
+}

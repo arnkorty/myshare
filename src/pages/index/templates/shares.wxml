@@ -1,0 +1,19 @@
+<import src="./date.wxml" />
+<import src="./message.wxml" />
+<import src="./year.wxml" />
+<template name="shares">
+  <view class="shares">
+  <block wx:for="{{shares}}" wx:key="index">
+    <template wx:if="{{item.year}}" is="year" data="{{...item}}"/>
+    <view wx:else class="share-list">
+      <template is="date" data="{{date: item.date}}" />
+      {{share.messages}}
+      <view class="messages">
+        <block wx:for="{{item.messages}}" wx:for-item="message" wx:key="index">
+          <template is="message" data="{{...message}}" />
+        </block>
+      </view>
+    </view>
+  </block>
+  </view>
+</template>

@@ -1,0 +1,5 @@
+/dist
+.DS_Store
+.yardoc/
+node_modules/
+doc

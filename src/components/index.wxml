@@ -1,0 +1,8 @@
+<template name="component">
+  <template wx:if="{{ name }}" is="{{ name }}" data="{{ ..._data }}"></template>
+  <view wx:else>
+    =====================s
+  </view>
+</template>
+
+<import src="./demo/demo" />

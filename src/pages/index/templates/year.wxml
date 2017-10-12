@@ -1,0 +1,5 @@
+<template name="year">
+  <view class="share-year">
+    <text>{{ year }}</text>
+  </view>
+</template>

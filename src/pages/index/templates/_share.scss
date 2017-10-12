@@ -1,0 +1,140 @@
+@mixin text-ellipsis($lines){
+  overflow : hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+.shares {
+    .share-year{
+      padding: 50rpx 30rpx 20rpx;
+      font-size: 56rpx;
+      font-weight: 400;
+    }
+  .share-list{
+    display: flex;
+    flex-flow: row;
+    padding: 20rpx 30rpx 0;
+    .qqemoji{
+      height: 48rpx;
+      width: 48rpx;
+      vertical-align: text-top;
+    }
+    .share-date{
+      width: 140rpx;
+      vertical-align: top;
+      .yesterday,.today{
+        font-size: 56rpx;
+        font-weight: 400;
+      }
+      .day>view{
+        display: inline-block;
+        &.day{
+          font-size: 56rpx;
+          font-weight: 400;
+        }
+        &.month{
+          font-size: 32rpx;
+        }
+      }
+    }
+    .messages{
+      flex: 1;
+      font-size: 34rpx;
+      padding-top: 20rpx;
+      .message-list{
+        margin-bottom: 20rpx;
+        display: flex;
+      }
+      .text{
+        background:#f6f8f9;
+        padding: 10rpx 14rpx;
+        max-height: 88rpx;
+        min-height: 40rpx;
+        flex: 1;
+        @include text-ellipsis(2);
+      }
+      view.image-remark{
+          // display: inline-block;
+          // float: left;
+          flex: 1;
+          height: 210rpx;
+          width: 100rpx;
+          padding-left: 10rpx;
+          position: relative;
+          &>view{
+            @include text-ellipsis(3);
+          }
+          text{
+            color: #989899;
+            position: absolute;
+            bottom: 0;
+            left: 10rpx;
+          }
+      }
+      .images{
+        // display: inline-block;
+        // float: left;
+        height: 210rpx;
+        width: 210rpx;
+        overflow: hidden;
+        image{
+          float: left;
+        }
+        &.images-1{
+          image{
+            height: 210rpx;
+            width: 210rpx;
+          }
+        }
+        &.images-2{
+          image{
+            height: 210rpx;
+            width: 104rpx; 
+            &.image-0{
+              padding-right: 4rpx;
+            }
+          }
+        }
+        &.images-3{
+          .image-0{
+            height: 210rpx;
+            width: 104rpx; 
+            padding-right: 4rpx;
+          }
+          .image-1,.image-2{
+            height: 105rpx;
+            width: 105rpx;
+            padding-bottom: 4rpx;
+          }
+        }
+        &.images-4,&.images-5,&.images-6,&.images-7,&.images-8,&.images-9{
+          image{
+            height: 104rpx;
+            width: 104rpx;
+            &.image-0,&.image-2{
+              padding-right: 4rpx;
+            }
+            padding-bottom: 4rpx;
+          }
+        }
+      }
+      .share-link{
+        background:#f6f8f9;
+        height: 92rpx;
+        display: flex;
+        flex: 1;
+        padding: 4rpx;
+        image{
+          height: 82rpx;
+          width: 82rpx;
+        }
+        .share-text{
+          flex: 1;
+          padding-left: 10rpx;
+          @include text-ellipsis(2);
+        }
+      }
+    }
+  }  
+}

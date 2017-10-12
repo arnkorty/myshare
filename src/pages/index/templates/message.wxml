@@ -1,0 +1,32 @@
+<import src="./emoji-text.wxml" />
+<template name="message">
+  <view class="message-list">
+    <block wx:if="{{type === 'text'}}">
+      <view class="text">
+        <template is="emoji-text" data="{{arr: emoji_messages}}"></template>
+      </view>
+    </block>
+    <block wx:if="{{type === 'image' || type === 'textImage'}}">
+      <view class="images images-{{images.length}}">
+        <image wx:for="{{images}}" wx:for-item="url" class="image-{{index}}" wx:key="index" src="{{url}}"/>
+      </view>
+      <view class="image-remark">
+        <view>
+          <template is="emoji-text" data="{{arr: emoji_messages}}"></template>
+        </view>
+        <text class="image-count">
+          共{{images.length}}张
+        </text>
+      </view>
+    </block>
+    <block wx:if="{{type === 'share'}}">
+      <view class="share-link">
+        <image src="{{thumb}}" />
+        <!-- emoji 待处理 -->
+        <view class="share-text">
+          <template is="emoji-text" data="{{arr: emoji_messages}}"></template>
+        </view>
+      </view>
+    </block>
+  </view>
+</template>

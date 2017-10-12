@@ -1,0 +1,5 @@
+  <template name="Demo">
+  <view class="">
+    <text class="" bindtap="{{ on.tap }}">测试</text>
+  </view>
+  </template>

@@ -1,0 +1,15 @@
+<template name='emoji-text'>
+  <block wx:for="{{arr}}" wx:key="index">
+    <block wx:if="{{item.strs}}">
+      {{item.strs}}
+    </block>
+
+    <block wx:if="{{item.qqemoji}}">
+      <image
+        mode="aspectFill"
+        class='qqemoji'
+        src="/images/wxemoji48/f{{item.qqemoji}}.png"
+      />
+    </block>
+  </block>
+</template>

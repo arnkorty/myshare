@@ -1,0 +1,6 @@
+module.exports = {
+  transTxt: function(txt) {
+    // 待处理转换显示文本
+    return txt
+  }
+}

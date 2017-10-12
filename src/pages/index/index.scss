@@ -1,0 +1,44 @@
+/**index.wxss**/
+$padding-left-right: 30rpx;
+$padding-top: 20rpx;
+.banner{
+  .banner-image{
+    height: 560rpx;
+    width: 750rpx;
+  }
+  position: relative;
+}
+.userinfo {
+  position: absolute;
+  bottom: -48rpx;
+  right: 10rpx;
+  left: 0rpx;
+  .userinfo-avatar {
+    width: 128rpx;
+    height: 128rpx;
+    margin: 20rpx;
+    border: 3rpx solid white;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .userinfo-nickname {
+    color: white;
+    position: absolute;
+    bottom: 78rpx;
+    right: 188rpx;
+  }
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+.sign-remark{
+  text-align: right;
+  padding-right: $padding-left-right;
+  padding-left: $padding-left-right;
+  margin-top: 48rpx;
+  font-size: 30rpx;
+  color: #989898
+}
+@import './templates/_share.scss'
