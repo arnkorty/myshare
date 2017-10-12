@@ -1,5 +1,8 @@
 import { trans_output } from './trans_text'
 export function recombinShares (shares) {
+  shares = shares.sort(function(a, b) {
+    return Date.parse(b.createdAt) - Date.parse(a.createdAt)
+  })
   let result = []
   let j = 0
   for(let i = 0, len = shares.length; i < len ; i ++) {
