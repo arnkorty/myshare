@@ -6,7 +6,7 @@
     <view wx:elif="{{ fn.isToday(date) }}" class="today">
     今天
     </view>
-    <view wx:elif="{{ fn.isYesterDay(date) }}" class="yesterday">
+    <view wx:elif="{{ fn.isYesterday(date) }}" class="yesterday">
     昨天
     </view>
     <view wx:else class="day">
