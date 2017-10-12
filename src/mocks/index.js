@@ -65,7 +65,7 @@ export const shares = [
   {
     createdAt: timeDiff({day: -2}),
     message: {
-      text: '尝试用类似编码风格实现一个单页小程序 UI，创建一个工程提交到 gitlab. 具体来说，是实现微信朋友圈中的帖子浏览 UI。示意图如下',
+      text: '以太坊从诞生到2017年5月，短短3年半时间，全球已有200多个以太坊应用诞生。',
       thumb: '/images/1.jpg',
       type: 'share'
     }
